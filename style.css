@@ -54,3 +54,13 @@ section {
 .job ul {
     margin-left: 20px;
 }
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.skill-category h4 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
