@@ -7,3 +7,6 @@ This repository contains my personal resume website built with HTML and CSS.
 - Learn Git and GitHub fundamentals
 - Create a professional online presence
 - Practice web development skills
+
+## Live Website
+View my resume at: https://ShelcyG.github.io
