@@ -36,3 +36,21 @@ h2 {
 section {
     margin-bottom: 25px;
 }
+.job {
+    margin-bottom: 20px;
+}
+
+.job h3 {
+    color: #2C3E50;
+    margin-bottom: 5px;
+}
+
+.job-date {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.job ul {
+    margin-left: 20px;
+}
