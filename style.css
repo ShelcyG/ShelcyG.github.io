@@ -81,3 +81,20 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+.project {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.project h3 {
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+
+.project a {
+    color: #4CAF50;
+    text-decoration: none;
+    margin-right: 10px;
+}
