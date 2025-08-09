@@ -64,3 +64,20 @@ section {
     color: #4CAF50;
     margin-bottom: 10px;
 }
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
