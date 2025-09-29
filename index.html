@@ -12,7 +12,7 @@
     <div class="nav-container">
       <div class="nav-logo">Shelcy Govada</div>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
+        <li><a href="#about" class="active">About</a></li>
         <li><a href="#resume">Resume</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -33,25 +33,31 @@
     <section id="resume" class="section">
       <div class="container">
         <h2>Resume</h2>
-        <div class="resume-block">
-          <h3>Experience</h3>
-          <ul>
-            <li>
-              <strong>Full Stack Developer</strong> – Tech Startup (2023–Present)<br>
-              Developed and deployed scalable SaaS platforms and optimized APIs for performance and reliability.
-            </li>
-            <li>
-              <strong>Frontend Engineer</strong> – Web Agency (2021–2023)<br>
-              Developed responsive interfaces and improved performance for client web projects.
-            </li>
-          </ul>
-          <h3>Education</h3>
-          <ul>
-            <li>
-              <strong>MSc Information Technology</strong><br>
-              University of North Texas (2023–2025)
-            </li>
-          </ul>
+        <div class="resume-columns">
+          <div class="resume-block">
+            <h3>Experience</h3>
+            <div class="resume-item">
+              <span class="resume-role">Full Stack Developer</span>
+              <span class="resume-place">Tech Startup (2023–Present)</span>
+              <ul>
+                <li>Developed and deployed scalable SaaS platforms and optimized APIs for performance and reliability.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <span class="resume-role">Frontend Engineer</span>
+              <span class="resume-place">Web Agency (2021–2023)</span>
+              <ul>
+                <li>Developed responsive interfaces and improved performance for client web projects.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="resume-block">
+            <h3>Education</h3>
+            <div class="resume-item">
+              <span class="resume-role">MSc Information Technology</span>
+              <span class="resume-place">University of North Texas (2023–2025)</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -95,6 +101,23 @@
   </footer>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    // Active nav highlight on scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        if (pageYOffset >= section.offsetTop - 80) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+          link.classList.add('active');
+        }
+      });
+    });
   </script>
 </body>
 </html>
