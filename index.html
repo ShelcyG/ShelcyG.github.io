@@ -4,19 +4,14 @@
   <meta charset="UTF-8">
   <title>Shelcy Govada | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Main CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Navbar -->
   <nav>
     <div class="nav-container">
-      <div class="nav-logo"><a href="#home">Shelcy Govada</a></div>
+      <div class="nav-logo">Shelcy Govada</div>
       <ul class="nav-links">
-        <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#resume">Resume</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -25,127 +20,73 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="section hero-section">
-    <div class="container hero-content">
-      <img src="profile.jpg" alt="Profile Photo" class="profile-img"/>
-      <h1>Hello, I'm <span class="accent">Shelcy Govada</span></h1>
-      <h2>Frontend & Full Stack Developer</h2>
-      <p>Building scalable web apps and seamless user experiences.</p>
-      <div class="hero-buttons">
-        <a href="mailto:shelcygovada@gmail.com" class="btn"><i class="fa fa-envelope"></i> Email</a>
-        <a href="https://www.linkedin.com/in/shelcy-govada/" target="_blank" class="btn btn-outline"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="YOUR_RESUME_LINK" target="_blank" class="btn btn-outline"><i class="fa fa-file"></i> Resume</a>
+  <main>
+    <section id="about" class="section">
+      <div class="container">
+        <h1>About Me</h1>
+        <p>
+          Hi, I'm Shelcy Govada, a professional developer focused on building robust and elegant web applications. My approach combines clean code, attention to user experience, and a passion for learning new technologies.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="section about-section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I'm a Full Stack Developer passionate about crafting robust web applications from concept to deployment.<br>
-        My expertise spans frontend and backend tech—React, Node.js, Express, MongoDB, and more.<br>
-        I thrive in fast-paced environments, translating business needs into technical solutions and delivering user-friendly digital experiences.
-      </p>
-      <ul class="about-list">
-        <li><b>Profile:</b> Full Stack Developer</li>
-        <li><b>Experience:</b> 3+ years</li>
-        <li><b>Stack:</b> JavaScript, React, Node.js, Express, MongoDB</li>
-        <li><b>Cloud:</b> AWS (EC2, S3), Vercel, Netlify</li>
-        <li><b>DevOps:</b> Docker, CI/CD, Git</li>
-        <li><b>Soft Skills:</b> Agile, Team Leadership, Problem Solving</li>
-        <li><b>Certifications:</b> Full Stack Web Dev (Coursera), AWS Certified Developer</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Resume Section -->
-  <section id="resume" class="section resume-section">
-    <div class="container">
-      <h2>Resume</h2>
-      <div class="resume-columns">
-        <div class="resume-col">
-          <h3>Work Experience</h3>
-          <div class="resume-item">
-            <h4>Full Stack Developer</h4>
-            <span class="resume-date">2023 – Present</span>
-            <span class="resume-company">Tech Startup, Remote</span>
-            <ul>
-              <li>Developed and deployed SaaS platform using React, Node.js, MongoDB, and AWS.</li>
-              <li>Integrated RESTful APIs and third-party services for real-time analytics.</li>
-              <li>Improved frontend performance and accessibility.</li>
-            </ul>
-          </div>
-          <div class="resume-item">
-            <h4>Frontend Engineer</h4>
-            <span class="resume-date">2021 – 2023</span>
-            <span class="resume-company">Web Agency</span>
-            <ul>
-              <li>Built responsive UIs using React, Next.js, and Material-UI.</li>
-              <li>Collaborated with backend and design teams to deliver seamless user experiences.</li>
-              <li>Optimized web apps for SEO and speed.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="resume-col">
+    <section id="resume" class="section">
+      <div class="container">
+        <h2>Resume</h2>
+        <div class="resume-block">
+          <h3>Experience</h3>
+          <ul>
+            <li>
+              <strong>Full Stack Developer</strong> – Tech Startup (2023–Present)<br>
+              Built and deployed scalable SaaS platforms and optimized APIs.
+            </li>
+            <li>
+              <strong>Frontend Engineer</strong> – Web Agency (2021–2023)<br>
+              Developed responsive interfaces and improved performance for client web projects.
+            </li>
+          </ul>
           <h3>Education</h3>
-          <div class="resume-item">
-            <h4>Master’s in Information Technology</h4>
-            <span class="resume-date">Aug 2023 – May 2025</span>
-            <span class="resume-company">University of North Texas</span>
-            <p>CGPA: 3.8/4.0<br>
-            Coursework: Programming, Web Based Development, Database Management, Data Visualization</p>
-          </div>
-          <div class="resume-item">
-            <h4>Bachelor’s in Electronics</h4>
-            <span class="resume-date">Aug 2017 – Aug 2021</span>
-            <span class="resume-company">G.Narayanamma Institute of Technology and Science</span>
-            <p>CGPA: 7.0/10<br>
-            Coursework: Cloud Computing, OOP, Database Management</p>
-          </div>
+          <ul>
+            <li>
+              <strong>MSc Information Technology</strong><br>
+              University of North Texas (2023–2025)
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section projects-section">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h4>E-Commerce Platform</h4>
-          <p>Full-featured MERN e-commerce site with authentication, order management, and payment integration.</p>
-        </div>
-        <div class="project-card">
-          <h4>Analytics Dashboard</h4>
-          <p>Real-time dashboard with React, Node.js, and Chart.js, visualizing live data from multiple APIs.</p>
-        </div>
-        <div class="project-card">
-          <h4>REST API for Task Management</h4>
-          <p>RESTful API built with Express and MongoDB, supporting JWT authentication and role-based access.</p>
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-list">
+          <div class="project-card">
+            <h4>E-Commerce Platform</h4>
+            <p>MERN stack site with authentication and payment integration.</p>
+          </div>
+          <div class="project-card">
+            <h4>Analytics Dashboard</h4>
+            <p>Real-time data dashboard with React, Node.js, and Chart.js.</p>
+          </div>
+          <div class="project-card">
+            <h4>REST API for Task Management</h4>
+            <p>Express/MongoDB API with JWT authentication and role-based access.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <h2>Contact</h2>
-      <div class="contact-list">
-        <div><i class="fas fa-map-marker-alt"></i> Denton, Texas, USA</div>
-        <div><i class="fas fa-envelope"></i> <a href="mailto:shelcygovada@gmail.com">shelcygovada@gmail.com</a></div>
-        <div><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/shelcy-govada/" target="_blank">LinkedIn</a></div>
-        <div><i class="fab fa-github"></i> <a href="https://github.com/ShelcyG" target="_blank">GitHub</a></div>
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <ul class="contact-list">
+          <li>Email: <a href="mailto:shelcygovada@gmail.com">shelcygovada@gmail.com</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/shelcy-govada/" target="_blank">linkedin.com/in/shelcy-govada</a></li>
+          <li>GitHub: <a href="https://github.com/ShelcyG" target="_blank">github.com/ShelcyG</a></li>
+        </ul>
       </div>
-      <div class="contact-footer">
-        <a href="mailto:shelcygovada@gmail.com" class="btn"><i class="fa fa-envelope"></i> Email Me</a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
     <div class="container">
@@ -154,24 +95,6 @@
   </footer>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    // Navbar active link on scroll
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-links a');
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if (pageYOffset >= sectionTop) {
-          current = section.getAttribute('id');
-        }
-      });
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
-          link.classList.add('active');
-        }
-      });
-    });
   </script>
 </body>
 </html>
