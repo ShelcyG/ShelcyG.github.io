@@ -1,393 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Shelcy Govada Portfolio</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Shelcy Govada | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/magnific-popup.css">
-  <link rel="stylesheet" href="css/aos.css">
-  <link rel="stylesheet" href="css/ionicons.min.css">
-  <link rel="stylesheet" href="css/flaticon.css">
-  <link rel="stylesheet" href="css/icomoon.css">
-  <link rel="stylesheet" href="css/style.css">
-
-  <style>
-    #typing-animation {
-      font-size: 30px;
-      font-weight: bold;
-      color: #fff;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 2px solid #fff;
-      animation: typing 3s steps(40, end) infinite;
-    }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    .zoom-effect {
-      overflow: hidden;
-      transition: transform 0.3s ease-out;
-    }
-    .zoom-effect:hover {
-      transform: scale(1.1);
-    }
-  </style>
 </head>
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-  
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+<body>
+  <nav class="navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Shelcy Govada</a>
-      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav">
-        <span class="oi oi-menu"></span> Menu
-      </button>
-      <div class="collapse navbar-collapse" id="ftco-nav">
-        <ul class="navbar-nav nav ml-auto">
-          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Experience</span></a></li>
-          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-        </ul>
+      <a class="navbar-brand" href="#">Shelcy Govada</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section with Typing Animation -->
-  <section id="home-section" class="hero">
-    <div class="home-slider owl-carousel">
-      <div class="slider-item ">
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end">
-            <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/your-profile-image.png);">
-              <div class="overlay"></div>
-            </div>
-            <div class="one-forth d-flex align-items-center ftco-animate">
-              <div class="text">
-                <span class="subheading">Welcome!</span>
-                <h1 class="mb-4 mt-3">I'm <span>Shelcy Govada</span></h1>
-                <span id="typing-animation"></span>
-                <script>
-                  const typingAnimationElement = document.getElementById('typing-animation');
-                  const typingTexts = [
-                    'Full Stack Developer  ',
-                    'Frontend Engineer  ',
-                    'Backend Developer  ',
-                    'MERN Stack Specialist  '
-                  ];
-                  function playTypingAnimation(text) {
-                    for (let i = 0; i < text.length; i++) {
-                      setTimeout(() => {
-                        typingAnimationElement.textContent += text[i];
-                      }, i * 120);
-                    }
-                    setTimeout(() => {
-                      typingAnimationElement.textContent = '';
-                      playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-                    }, text.length * 120);
-                  }
-                  playTypingAnimation(typingTexts[0]);
-                </script>
-                <br><br>
-                <h2>Building scalable web apps and seamless user experiences</h2>
-                <p>
-                  <a href="mailto:shelcygovada@gmail.com" class="btn btn-primary py-3 px-4">Email</a>
-                  <a href="https://www.linkedin.com/in/shelcy-govada/" class="btn btn-white btn-outline-white py-3 px-4">LinkedIn</a>
-                  <a href="YOUR_RESUME_LINK" class="btn btn-white btn-outline-white py-3 px-4">Resume</a>
-                </p>
-              </div>
-            </div>
-          </div>
+  <header class="hero">
+    <div class="container hero-content">
+      <div>
+        <h1>Hello, I'm <span class="highlight">Shelcy Govada</span></h1>
+        <h2>Data Engineer & Full Stack Developer</h2>
+        <p class="subtitle">Building robust data workflows and scalable web apps with a passion for automation, analytics, and cloud solutions.</p>
+        <div class="hero-buttons">
+          <a href="mailto:shelcygovada@gmail.com" class="btn-primary"><i class="fa fa-envelope"></i> Email Me</a>
+          <a href="https://www.linkedin.com/in/shelcy-govada/" class="btn-secondary" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/ShelcyG" class="btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="section about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I am a graduate student at the University of North Texas passionate about data engineering, automation, and building scalable web applications. With hands-on experience in cloud platforms, DevOps, and analytics, I thrive at the intersection of technology and data-driven solutions.
+      </p>
+      <div class="education">
+        <h3>Education</h3>
+        <ul>
+          <li>
+            <strong>Master’s in Information Technology</strong>, University of North Texas<br>
+            Aug 2023 – May 2025<br>
+            <span>CGPA: 3.8/4.0</span>
+            <small>Relevant coursework: Programming, Web Development, DB Management, Data Visualization</small>
+          </li>
+          <li>
+            <strong>Bachelor’s in Electronics</strong>, G.Narayanamma Institute of Technology and Science<br>
+            Aug 2017 – Aug 2021<br>
+            <span>CGPA: 7.0/10</span>
+            <small>Relevant coursework: Cloud Computing, OOP, Database Management</small>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section skills">
+    <div class="container">
+      <h2>Technical Skills</h2>
+      <div class="skills-list">
+        <div>
+          <h4><i class="fas fa-code"></i> Languages & Databases</h4>
+          <p>Python, Java, SQL/NoSQL (Postgres, DynamoDB), R</p>
+        </div>
+        <div>
+          <h4><i class="fas fa-cloud"></i> Cloud & DevOps</h4>
+          <p>AWS (Lambda, S3, DynamoDB, Kinesis, Bedrock), Docker, OpenShift, GitLab CI/CD</p>
+        </div>
+        <div>
+          <h4><i class="fas fa-database"></i> Data Engineering</h4>
+          <p>ETL Pipelines, Kafka, RabbitMQ, Hadoop, Spark</p>
+        </div>
+        <div>
+          <h4><i class="fas fa-robot"></i> ML & Analytics</h4>
+          <p>Predictive Modeling, Time Series, Anomaly Detection, TensorFlow, Scikit-Learn, Pandas, NumPy</p>
+        </div>
+        <div>
+          <h4><i class="fas fa-chart-bar"></i> Visualization</h4>
+          <p>Tableau, Kibana, MicroStrategy, Matplotlib</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+  <section id="experience" class="section experience">
     <div class="container">
-      <div class="row d-flex align-items-stretch">
-        <div class="col-md-6 col-lg-5 d-flex">
-          <div class="img-about img d-flex align-items-stretch">
-            <div class="overlay">
-              <div class="about-img">
-                <img src="images/your-profile-image.png" class="img-fluid rounded b-shadow-a" alt="Shelcy Govada">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-          <div class="heading-section ftco-animate">
-            <h1 class="big">About</h1>
-            <h2 class="mb-4">About Me</h2>
-            <p>
-              I'm a Full Stack Developer with a passion for crafting robust web applications from concept to deployment. My expertise spans both frontend and backend tech—React, Node.js, Express, MongoDB, and more.
-              <br><br>
-              I thrive in fast-paced environments, translating business needs into technical solutions and delivering user-friendly digital experiences.
-            </p>
-            <ul class="about-info mt-4 px-md-0 px-2">
-              <li class="d-flex"><span>Profile:</span> <span>Full Stack Developer</span></li>
-              <li class="d-flex"><span>Experience:</span> <span>3+ years</span></li>
-              <li class="d-flex"><span>Stack:</span> <span>JavaScript, React, Node.js, Express, MongoDB</span></li>
-              <li class="d-flex"><span>Cloud:</span> <span>AWS (EC2, S3), Vercel, Netlify</span></li>
-              <li class="d-flex"><span>DevOps:</span> <span>Docker, CI/CD, Git</span></li>
-              <li class="d-flex"><span>Soft Skills:</span> <span>Agile, Team Leadership, Problem Solving</span></li>
-              <li class="d-flex"><span>Certifications:</span> <span>Full Stack Web Dev (Coursera), AWS Certified Developer</span></li>
-            </ul>
-          </div>
-          <div class="counter-wrap ftco-animate d-flex mt-md-3">
-            <div class="text">
-              <p class="mb-4">
-                <span class="number" data-number="20">0</span> <span>+</span>
-                <span>&nbsp; Projects Delivered</span>
-              </p>
-              <p><a href="https://github.com/ShelcyG" class="btn btn-primary py-3 px-3">GitHub</a></p>
-            </div>
-          </div>
-        </div>
+      <h2>Experience</h2>
+      <div class="job">
+        <h3>Graduate Student Assistant, Housing and Residence Life</h3>
+        <span class="job-meta">University of North Texas | Nov 2023 – May 2025</span>
+        <ul>
+          <li>Maintained and updated housing data records, improving accuracy by 30%.</li>
+          <li>Built dashboards for housing data, reducing manual reporting workload by 40%.</li>
+          <li>Automated data workflows using Python and SQL, saving time and boosting efficiency.</li>
+          <li>Collaborated with staff to ensure reliable data for housing operations.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <h3>Systems Engineer</h3>
+        <span class="job-meta">Infosys | Dec 2021 – June 2023</span>
+        <ul>
+          <li>Built scalable web applications (Java, React.js, Postgres), improving reliability by 30%.</li>
+          <li>Deployed microservices on AWS with Docker & OpenShift, achieving 40% faster deployments.</li>
+          <li>Implemented event-driven solutions (Kafka, RabbitMQ), reducing latency by 25%.</li>
+          <li>Developed and optimized RESTful APIs for seamless service integration.</li>
+          <li>Automated builds and deployments via GitLab CI/CD, reducing errors and speeding releases.</li>
+          <li>Developed automation scripts and backend utilities in Python.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <h3>Summer Intern, Data Engineer</h3>
+        <span class="job-meta">RoboSync | May 2019 – July 2019</span>
+        <ul>
+          <li>Designed automated data pipelines using SQL and Python, improving processing speed by 35%.</li>
+          <li>Cleaned and validated large datasets, ensuring data accuracy for analytics.</li>
+          <li>Developed dashboards and visualizations in Tableau for business insights.</li>
+          <li>Optimized data models for machine learning projects.</li>
+          <li>Supported ETL and performed exploratory data analysis for actionable insights.</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- Experience Section -->
-  <section class="ftco-section ftco-no-pb" id="resume-section">
+  <section id="projects" class="section projects">
     <div class="container">
-      <div class="row justify-content-center pb-5">
-        <div class="col-md-10 heading-section text-center ftco-animate">
-          <h1 class="big big-2">Experience</h1>
-          <h2 class="mb-4">Professional Experience</h2>
-          <p>Full Stack Developer with a proven history of building scalable web applications and APIs for fast-moving startups and enterprise clients.</p>
+      <h2>Academic Projects</h2>
+      <div class="project-list">
+        <div class="project-card">
+          <h4>AI Agent Workflow for Automated Daily Devotionals <span class="date">Apr 2025 – May 2025</span></h4>
+          <ul>
+            <li>Developed an AI-driven automation workflow using AWS Strands Agent and Lambda, reducing manual content creation by 80%.</li>
+            <li>Integrated AWS Bedrock, evaluated LLMs for quality & tone via prompt engineering.</li>
+            <li>Automated content storage, versioning, and publishing with Python, AWS Lambda, and S3.</li>
+          </ul>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="resume-wrap ftco-animate">
-            <span class="date">2023 – Present</span>
-            <h2>Full Stack Developer</h2>
-            <span class="position">Tech Startup, Remote</span>
-            <p class="mt-4">
-              <ul>
-                <li>Developed and deployed SaaS platform using React, Node.js, MongoDB, and AWS.</li>
-                <li>Integrated RESTful APIs and third-party services for real-time analytics.</li>
-                <li>Improved frontend performance and accessibility.</li>
-              </ul>
-            </p>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="resume-wrap ftco-animate">
-            <span class="date">2021 – 2023</span>
-            <h2>Frontend Engineer</h2>
-            <span class="position">Web Agency</span>
-            <p class="mt-4">
-              <ul>
-                <li>Built responsive UIs using React, Next.js, and Material-UI.</li>
-                <li>Collaborated with backend and design teams to deliver seamless user experiences.</li>
-                <li>Optimized web apps for SEO and speed.</li>
-              </ul>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section class="ftco-section" id="skills-section">
-    <div class="container">
-      <div class="row justify-content-center mb-5 pb-5">
-        <div class="col-md-7 heading-section text-center ftco-animate">
-          <h1 class="big big-2">Skills</h1>
-          <h2 class="mb-4">Technical Expertise</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 d-flex">
-          <div class="blog-entry justify-content-end">
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading"><i class="fab fa-js-square"></i> Frontend</h3>
-              <ul>
-                <li>React, Next.js, Redux</li>
-                <li>HTML5, CSS3, SASS</li>
-                <li>Material-UI, Bootstrap</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex">
-          <div class="blog-entry justify-content-end">
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading"><i class="fab fa-node-js"></i> Backend</h3>
-              <ul>
-                <li>Node.js, Express.js</li>
-                <li>MongoDB, PostgreSQL</li>
-                <li>RESTful APIs, JWT</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex">
-          <div class="blog-entry">
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading"><i class="fas fa-cloud"></i> DevOps &amp; Cloud</h3>
-              <ul>
-                <li>AWS, Docker, Git, CI/CD</li>
-                <li>Netlify, Vercel</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section class="ftco-section" id="project-section">
-    <div class="container">
-      <div class="row justify-content-center mb-5 pb-5">
-        <div class="col-md-7 heading-section text-center ftco-animate">
-          <h1 class="big big-2">Projects</h1>
-          <h2 class="mb-4">Featured Projects</h2>
-          <p>Sample of my work in full stack web development.</p>
-        </div>
-      </div>
-      <div class="row d-flex">
-        <div class="col-md-4 d-flex ftco-animate">
-          <div class="blog-entry justify-content-end">
-            <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_fullstack.jpg');"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading"><a href="#">E-Commerce Platform</a></h3>
-              <p>Built a full-featured MERN e-commerce site with authentication, order management, and payment integration.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex ftco-animate">
-          <div class="blog-entry justify-content-end">
-            <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_dashboard.jpg');"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading"><a href="#">Analytics Dashboard</a></h3>
-              <p>Developed a real-time dashboard with React, Node.js, and Chart.js, visualizing live data from multiple APIs.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex ftco-animate">
-          <div class="blog-entry">
-            <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_api.jpg');"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading"><a href="#">REST API for Task Management</a></h3>
-              <p>RESTful API built with Express and MongoDB, supporting JWT authentication and role-based access.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-    <div class="container">
-      <div class="row justify-content-center mb-5 pb-3">
-        <div class="col-md-7 heading-section text-center ftco-animate">
-          <h1 class="big big-2">Contact</h1>
-          <h2 class="mb-4">Contact Me</h2>
-          <p>Let's connect and build something amazing!</p>
-        </div>
-      </div>
-      <div class="row d-flex contact-info mb-5">
-        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          <div class="align-self-stretch box p-4 text-center">
-            <div class="icon d-flex align-items-center justify-content-center">
-              <span class="icon-map-signs"></span>
-            </div>
-            <h3 class="mb-4">Location</h3>
-            <p>Denton, Texas, USA</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          <div class="align-self-stretch box p-4 text-center">
-            <div class="icon d-flex align-items-center justify-content-center">
-              <span class="icon-phone2"></span>
-            </div>
-            <h3 class="mb-4">Contact Number</h3>
-            <p><a href="tel://+10000000000">+1 (000) 000-0000</a></p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          <div class="align-self-stretch box p-4 text-center">
-            <div class="icon d-flex align-items-center justify-content-center">
-              <span class="icon-paper-plane"></span>
-            </div>
-            <h3 class="mb-4">Email</h3>
-            <p><a href="mailto:shelcygovada@gmail.com">shelcygovada@gmail.com</a></p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          <div class="align-self-stretch box p-4 text-center">
-            <div class="icon d-flex align-items-center justify-content-center">
-              <span class="icon-globe"></span>
-            </div>
-            <h3 class="mb-4">Resume</h3>
-            <p><a href="YOUR_RESUME_LINK">Download PDF</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-md-7 ftco-animate text-center">
-          <h2>Have a <span>Question?</span> <a href="mailto:shelcygovada@gmail.com" class="btn btn-primary py-3 px-5">Email Me</a></h2>
-          <br>
-          <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-            <li class="ftco-animate normal-txt">Find me on</li>
-            <li class="ftco-animate"><a href="https://www.linkedin.com/in/shelcy-govada/"><span class="icon-linkedin"></span></a></li>
-            <li class="ftco-animate"><a href="https://github.com/ShelcyG"><span class="icon-github"></span></a></li>
+        <div class="project-card">
+          <h4>Madrid Air Quality Analysis <span class="date">Oct 2024 – Nov 2024</span></h4>
+          <ul>
+            <li>Built a Python pipeline to analyze environmental and traffic variables for air quality management.</li>
+            <li>Applied predictive modeling, data cleaning, and visualization to identify trends.</li>
+            <li>Delivered interactive dashboards and reports for decision-making.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="ftco-footer ftco-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <p>
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-            Shelcy Govada | Inspired by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-          </p>
+  <section id="contact" class="section contact">
+    <div class="container contact-content">
+      <h2>Contact</h2>
+      <div class="contact-details">
+        <div>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:shelcygovada@gmail.com">shelcygovada@gmail.com</a>
+        </div>
+        <div>
+          <i class="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/shelcy-govada/" target="_blank">LinkedIn</a>
+        </div>
+        <div>
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/ShelcyG" target="_blank">GitHub</a>
+        </div>
+        <div>
+          <i class="fas fa-map-marker-alt"></i>
+          Denton, Texas, USA
         </div>
       </div>
     </div>
-  </footer>
-
-  <!-- Loader and JS dependencies -->
-  <div id="ftco-loader" class="show fullscreen">
-    <svg class="circular" width="48px" height="48px">
-      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
-      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#2563eb"/>
-    </svg>
-  </div>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="js/main.js"></script>
+    <footer>
+      <p>© <span id="year"></span> Shelcy Govada</p>
+    </footer>
+  </section>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
