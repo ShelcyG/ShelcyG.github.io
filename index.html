@@ -5,13 +5,40 @@
   <title>Shelcy Govada | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Additional centering for hero and sections */
+    .centered {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero-content {
+      align-items: center;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .skills-list, .project-list, .contact-details {
+      justify-content: center;
+    }
+    .about-info {
+      display: inline-block;
+      text-align: left;
+    }
+    @media (max-width: 700px) {
+      .centered, .hero-content { align-items: center; text-align: center; }
+      .about-info { text-align: left; }
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="container">
+    <div class="container centered" style="flex-direction:row;justify-content:space-between;">
       <a class="navbar-brand" href="#">Shelcy Govada</a>
       <div class="nav-links">
         <a href="#about">About</a>
@@ -24,26 +51,24 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero">
-    <div class="container hero-content">
-      <div>
-        <h1>Welcome!<br>I'm <span class="highlight">Shelcy Govada</span></h1>
-        <h2>Frontend Engineer</h2>
-        <p class="subtitle">Building scalable web apps and seamless user experiences</p>
-        <div class="hero-buttons">
-          <a href="mailto:shelcygovada@gmail.com" class="btn-primary"><i class="fa fa-envelope"></i> Email</a>
-          <a href="https://www.linkedin.com/in/shelcy-govada/" class="btn-secondary" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-          <a href="YOUR_RESUME_LINK" class="btn-secondary" target="_blank"><i class="fa fa-file"></i> Resume</a>
-        </div>
+  <header class="hero centered">
+    <div class="container hero-content centered">
+      <h1>Welcome!<br>I'm <span class="highlight">Shelcy Govada</span></h1>
+      <h2>Frontend Engineer</h2>
+      <p class="subtitle">Building scalable web apps and seamless user experiences</p>
+      <div class="hero-buttons centered">
+        <a href="mailto:shelcygovada@gmail.com" class="btn-primary"><i class="fa fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/in/shelcy-govada/" class="btn-secondary" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="YOUR_RESUME_LINK" class="btn-secondary" target="_blank"><i class="fa fa-file"></i> Resume</a>
       </div>
     </div>
   </header>
 
   <!-- About Section -->
-  <section id="about" class="section about">
-    <div class="container">
+  <section id="about" class="section about centered">
+    <div class="container centered">
       <h2>About Me</h2>
-      <p>
+      <p style="max-width: 600px;">
         I'm a Full Stack Developer with a passion for crafting robust web applications from concept to deployment. My expertise spans both frontend and backend tech—React, Node.js, Express, MongoDB, and more. I thrive in fast-paced environments, translating business needs into technical solutions and delivering user-friendly digital experiences.
       </p>
       <ul class="about-info">
@@ -63,11 +88,10 @@
   </section>
 
   <!-- Experience Section -->
-  <section id="experience" class="section experience">
-    <div class="container">
+  <section id="experience" class="section experience centered">
+    <div class="container centered">
       <h2>Professional Experience</h2>
-
-      <div class="job">
+      <div class="job" style="max-width:600px;">
         <h3>Full Stack Developer</h3>
         <span class="job-meta">Tech Startup, Remote | 2023 – Present</span>
         <ul>
@@ -76,7 +100,7 @@
           <li>Improved frontend performance and accessibility.</li>
         </ul>
       </div>
-      <div class="job">
+      <div class="job" style="max-width:600px;">
         <h3>Frontend Engineer</h3>
         <span class="job-meta">Web Agency | 2021 – 2023</span>
         <ul>
@@ -89,10 +113,10 @@
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="section skills">
-    <div class="container">
+  <section id="skills" class="section skills centered">
+    <div class="container centered">
       <h2>Technical Expertise</h2>
-      <div class="skills-list">
+      <div class="skills-list" style="display:flex;flex-wrap:wrap;gap:30px;justify-content:center;">
         <div>
           <h4><i class="fab fa-react"></i> Frontend</h4>
           <ul>
@@ -121,19 +145,19 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="section projects">
-    <div class="container">
+  <section id="projects" class="section projects centered">
+    <div class="container centered">
       <h2>Featured Projects</h2>
-      <div class="project-list">
-        <div class="project-card">
+      <div class="project-list" style="display:flex;flex-wrap:wrap;gap:24px;justify-content:center;">
+        <div class="project-card" style="max-width:330px;">
           <h4>E-Commerce Platform</h4>
           <p>Built a full-featured MERN e-commerce site with authentication, order management, and payment integration.</p>
         </div>
-        <div class="project-card">
+        <div class="project-card" style="max-width:330px;">
           <h4>Analytics Dashboard</h4>
           <p>Developed a real-time dashboard with React, Node.js, and Chart.js, visualizing live data from multiple APIs.</p>
         </div>
-        <div class="project-card">
+        <div class="project-card" style="max-width:330px;">
           <h4>REST API for Task Management</h4>
           <p>RESTful API built with Express and MongoDB, supporting JWT authentication and role-based access.</p>
         </div>
@@ -142,10 +166,10 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section contact">
-    <div class="container contact-content">
+  <section id="contact" class="section contact centered">
+    <div class="container centered">
       <h2>Contact Me</h2>
-      <div class="contact-details">
+      <div class="contact-details" style="justify-content:center;">
         <div>
           <i class="fas fa-map-marker-alt"></i>
           Denton, Texas, USA
@@ -174,7 +198,7 @@
     </div>
   </section>
 
-  <footer style="text-align:center;color:#94a3b8;padding:18px 0 8px 0;">
+  <footer style="text-align:center;color:#7a7a7a;padding:18px 0 8px 0;">
     &copy; <span id="year"></span> Shelcy Govada
   </footer>
   <script>
