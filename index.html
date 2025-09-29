@@ -1,334 +1,177 @@
-:root {
-  --primary: #7b5e57;         /* Taupe/Bronze accent */
-  --primary-light: #cbbfae;   /* Light accent */
-  --bg: #f7f7f9;              /* Background */
-  --bg-section: #ffffff;      /* Section/Container background */
-  --text-main: #232323;       /* Main text */
-  --text-muted: #7a7a7a;      /* Muted text */
-  --border: #e6e4e4;          /* Borders */
-  --radius: 12px;
-  --shadow: 0 2px 16px rgba(120, 120, 120, 0.08);
-  --transition: 0.19s cubic-bezier(.4,0,.2,1);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shelcy Govada | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo"><a href="#home">Shelcy Govada</a></div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-html, body {
-  background: var(--bg);
-  color: var(--text-main);
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-}
+  <!-- Hero Section -->
+  <section id="home" class="section hero-section">
+    <div class="container hero-content">
+      <img src="profile.jpg" alt="Profile Photo" class="profile-img"/>
+      <h1>Hello, I'm <span class="accent">Shelcy Govada</span></h1>
+      <h2>Frontend & Full Stack Developer</h2>
+      <p>Building scalable web apps and seamless user experiences.</p>
+      <div class="hero-buttons">
+        <a href="mailto:shelcygovada@gmail.com" class="btn"><i class="fa fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/in/shelcy-govada/" target="_blank" class="btn btn-outline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="YOUR_RESUME_LINK" target="_blank" class="btn btn-outline"><i class="fa fa-file"></i> Resume</a>
+      </div>
+    </div>
+  </section>
 
-a {
-  color: var(--primary);
-  text-decoration: none;
-  transition: color var(--transition);
-}
-a:hover {
-  color: var(--primary-light);
-}
+  <!-- About Section -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I'm a Full Stack Developer passionate about crafting robust web applications from concept to deployment.<br>
+        My expertise spans frontend and backend tech—React, Node.js, Express, MongoDB, and more.<br>
+        I thrive in fast-paced environments, translating business needs into technical solutions and delivering user-friendly digital experiences.
+      </p>
+      <ul class="about-list">
+        <li><b>Profile:</b> Full Stack Developer</li>
+        <li><b>Experience:</b> 3+ years</li>
+        <li><b>Stack:</b> JavaScript, React, Node.js, Express, MongoDB</li>
+        <li><b>Cloud:</b> AWS (EC2, S3), Vercel, Netlify</li>
+        <li><b>DevOps:</b> Docker, CI/CD, Git</li>
+        <li><b>Soft Skills:</b> Agile, Team Leadership, Problem Solving</li>
+        <li><b>Certifications:</b> Full Stack Web Dev (Coursera), AWS Certified Developer</li>
+      </ul>
+    </div>
+  </section>
 
-.navbar {
-  background: var(--bg-section);
-  border-bottom: 1px solid var(--border);
-  box-shadow: none;
-  padding: 0.9rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 99;
-}
-.container {
-  width: 94%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.navbar-brand {
-  font-size: 1.45rem;
-  font-weight: 700;
-  color: var(--primary);
-  letter-spacing: 2px;
-  text-decoration: none;
-}
-.nav-links a {
-  color: var(--text-main);
-  margin-left: 18px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  position: relative;
-  transition: color var(--transition);
-  font-size: 1rem;
-}
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--primary);
-}
+  <!-- Resume Section -->
+  <section id="resume" class="section resume-section">
+    <div class="container">
+      <h2>Resume</h2>
+      <div class="resume-columns">
+        <div class="resume-col">
+          <h3>Work Experience</h3>
+          <div class="resume-item">
+            <h4>Full Stack Developer</h4>
+            <span class="resume-date">2023 – Present</span>
+            <span class="resume-company">Tech Startup, Remote</span>
+            <ul>
+              <li>Developed and deployed SaaS platform using React, Node.js, MongoDB, and AWS.</li>
+              <li>Integrated RESTful APIs and third-party services for real-time analytics.</li>
+              <li>Improved frontend performance and accessibility.</li>
+            </ul>
+          </div>
+          <div class="resume-item">
+            <h4>Frontend Engineer</h4>
+            <span class="resume-date">2021 – 2023</span>
+            <span class="resume-company">Web Agency</span>
+            <ul>
+              <li>Built responsive UIs using React, Next.js, and Material-UI.</li>
+              <li>Collaborated with backend and design teams to deliver seamless user experiences.</li>
+              <li>Optimized web apps for SEO and speed.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="resume-col">
+          <h3>Education</h3>
+          <div class="resume-item">
+            <h4>Master’s in Information Technology</h4>
+            <span class="resume-date">Aug 2023 – May 2025</span>
+            <span class="resume-company">University of North Texas</span>
+            <p>CGPA: 3.8/4.0<br>
+            Coursework: Programming, Web Based Development, Database Management, Data Visualization</p>
+          </div>
+          <div class="resume-item">
+            <h4>Bachelor’s in Electronics</h4>
+            <span class="resume-date">Aug 2017 – Aug 2021</span>
+            <span class="resume-company">G.Narayanamma Institute of Technology and Science</span>
+            <p>CGPA: 7.0/10<br>
+            Coursework: Cloud Computing, OOP, Database Management</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-/* Hero Section */
-.hero {
-  background: var(--bg-section);
-  min-height: 56vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid var(--border);
-  padding: 2.5rem 0 1.5rem 0;
-}
-.hero-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 600px;
-}
-.hero h1 {
-  font-size: 2.3rem;
-  margin-bottom: 0.2em;
-  font-weight: 700;
-  color: var(--primary);
-  letter-spacing: 1px;
-}
-.hero h1 .highlight {
-  color: var(--text-main);
-  font-weight: 700;
-}
-.hero h2 {
-  font-size: 1.35rem;
-  color: var(--text-muted);
-  margin-bottom: 0.45em;
-  font-weight: 600;
-}
-.subtitle {
-  font-size: 1.04rem;
-  color: var(--text-muted);
-  margin-bottom: 1.9em;
-  font-weight: 500;
-}
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 13px;
-  margin-top: 1.1em;
-}
-.btn-primary, .btn-secondary {
-  border-radius: 25px;
-  padding: 0.65em 1.6em;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1.06rem;
-  transition: background var(--transition), color var(--transition), box-shadow var(--transition), transform var(--transition);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-.btn-primary {
-  background: var(--primary);
-  color: #fff;
-  box-shadow: var(--shadow);
-}
-.btn-primary:hover {
-  background: var(--primary-light);
-  color: var(--primary);
-  transform: translateY(-2px) scale(1.04);
-}
-.btn-secondary {
-  background: #fff;
-  color: var(--primary);
-  border: 1.5px solid var(--primary);
-}
-.btn-secondary:hover {
-  background: var(--primary);
-  color: #fff;
-}
+  <!-- Projects Section -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h4>E-Commerce Platform</h4>
+          <p>Full-featured MERN e-commerce site with authentication, order management, and payment integration.</p>
+        </div>
+        <div class="project-card">
+          <h4>Analytics Dashboard</h4>
+          <p>Real-time dashboard with React, Node.js, and Chart.js, visualizing live data from multiple APIs.</p>
+        </div>
+        <div class="project-card">
+          <h4>REST API for Task Management</h4>
+          <p>RESTful API built with Express and MongoDB, supporting JWT authentication and role-based access.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-/* Sections */
-.section {
-  padding: 50px 0 32px 0;
-  background: var(--bg);
-}
-.section h2 {
-  color: var(--primary);
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1.1em;
-  letter-spacing: 1px;
-}
-.section h3,
-.section h4 {
-  color: var(--text-main);
-  margin-bottom: 0.35em;
-}
-.section p {
-  color: var(--text-muted);
-}
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-list">
+        <div><i class="fas fa-map-marker-alt"></i> Denton, Texas, USA</div>
+        <div><i class="fas fa-envelope"></i> <a href="mailto:shelcygovada@gmail.com">shelcygovada@gmail.com</a></div>
+        <div><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/shelcy-govada/" target="_blank">LinkedIn</a></div>
+        <div><i class="fab fa-github"></i> <a href="https://github.com/ShelcyG" target="_blank">GitHub</a></div>
+      </div>
+      <div class="contact-footer">
+        <a href="mailto:shelcygovada@gmail.com" class="btn"><i class="fa fa-envelope"></i> Email Me</a>
+      </div>
+    </div>
+  </section>
 
-/* About */
-.about p {
-  font-size: 1.09rem;
-  color: var(--text-main);
-  margin-bottom: 1.4em;
-}
-.about-info {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.1em 0;
-}
-.about-info li {
-  display: flex;
-  margin-bottom: 7px;
-  color: var(--text-muted);
-}
-.about-info span:first-child {
-  color: var(--primary);
-  font-weight: 600;
-  min-width: 145px;
-  display: inline-block;
-}
-.about-info span:last-child {
-  color: var(--text-main);
-  font-weight: 500;
-}
-
-/* Skills */
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-.skills-list div {
-  background: var(--bg-section);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  min-width: 210px;
-  padding: 14px 22px;
-  margin-bottom: 20px;
-}
-.skills-list h4 {
-  color: var(--primary);
-  margin-bottom: 0.3em;
-  font-weight: 600;
-  font-size: 1.09rem;
-}
-.skills-list ul {
-  margin: 0.3em 0 0.7em 1.3em;
-  color: var(--text-muted);
-}
-.skills-list li {
-  margin-bottom: 3px;
-  font-size: 1rem;
-}
-
-/* Experience */
-.experience .job {
-  background: var(--bg-section);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 20px;
-  margin-bottom: 22px;
-  border-left: 3.5px solid var(--primary);
-  transition: box-shadow .18s, transform .16s;
-}
-.experience .job:hover {
-  box-shadow: 0 8px 32px rgba(120,100,80,0.08);
-  transform: scale(1.017) translateY(-2px);
-}
-.job-meta {
-  color: var(--primary-light);
-  font-size: 1rem;
-  font-weight: 500;
-}
-.experience ul {
-  margin: 0.8em 0 0 1.5em;
-  color: var(--text-muted);
-  font-size: 1.03rem;
-}
-
-/* Projects */
-.project-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-.project-card {
-  background: var(--bg-section);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  flex: 1 1 295px;
-  padding: 15px 18px;
-  margin-bottom: 12px;
-  border-top: 2.5px solid var(--primary);
-  transition: box-shadow .16s, transform .13s;
-}
-.project-card:hover {
-  box-shadow: 0 8px 32px rgba(180, 150, 100, 0.13);
-  transform: scale(1.018) translateY(-2px);
-}
-.project-card h4 {
-  margin-top: 0;
-  color: var(--primary);
-  font-size: 1.13rem;
-}
-.project-card p {
-  color: var(--text-muted);
-  font-size: 1rem;
-  margin: 0.5em 0 0 0;
-}
-
-/* Contact */
-.contact-details {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 23px 33px;
-  margin-bottom: 1em;
-  font-size: 1.08rem;
-}
-.contact-details > div {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-}
-.contact-details i {
-  color: var(--primary);
-  font-size: 1.2em;
-}
-
-/* Footer */
-footer {
-  margin-top: 2em;
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 1rem;
-  background: var(--bg-section);
-  padding: 16px 0 9px 0;
-  border-top: 1px solid var(--border);
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .container { flex-direction: column; align-items: flex-start; }
-  .hero-content { max-width: 100%; }
-  .project-list { flex-direction: column; }
-}
-@media (max-width: 700px) {
-  .navbar .container { flex-direction: column; }
-  .nav-links { margin-top: 1em; }
-  .hero h1 { font-size: 2rem; }
-  .section { padding: 35px 0 18px 0; }
-  .skills-list { flex-direction: column; }
-  .contact-details { flex-direction: column; gap: 11px; }
-}
-@media (max-width: 500px) {
-  .navbar { padding: 0.5rem 0; }
-  .hero { padding: 1.3rem 0 1rem 0; }
-  .section { padding: 14px 0 9px 0; }
-  .experience .job, .project-card { padding: 9px 4px; }
-}
-
-::-webkit-scrollbar { width: 7px; background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--primary-light); border-radius: 6px; }
+  <footer>
+    <div class="container">
+      &copy; <span id="year"></span> Shelcy Govada
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Navbar active link on scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
