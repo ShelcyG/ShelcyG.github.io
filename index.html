@@ -1,135 +1,533 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+:root {
+  --primary: #1a1a2e;
+  --secondary: #16213e;
+  --accent: #0f3460;
+  --highlight: #533483;
+  --text-dark: #2d3748;
+  --text-light: #4a5568;
+  --background: #f7fafc;
+  --white: #ffffff;
+  --border: #e2e8f0;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+  --radius: 12px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-container">
-      <div class="nav-logo">MyPortfolio</div>
-      <ul class="nav-links">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- Home Section -->
-  <section id="home" class="section">
-    <div class="container">
-      <h1>Hello, I'm [Your Name]</h1>
-      <div class="job-titles">Software Engineer & Graduate Student</div>
-      <div class="home-links">
-        <a href="#projects" class="home-btn">View Projects</a>
-        <a href="#contact" class="home-btn">Contact Me</a>
-      </div>
-    </div>
-  </section>
+html {
+  scroll-behavior: smooth;
+}
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p class="about-intro">
-        I’m a software engineer and graduate student with experience in full-stack development, cloud computing, and data analytics. I build scalable web applications, automate workflows, and create data-driven solutions using Java, React, Python, AWS, and SQL.
-      </p>
-    </div>
-  </section>
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--background);
+  color: var(--text-dark);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
 
-  <!-- Resume Section -->
-  <section id="resume" class="section">
-    <div class="container">
-      <h2>Resume</h2>
-      <div class="resume-columns">
-        <div class="resume-block">
-          <h3>Experience</h3>
-          <div class="resume-item">
-            <span class="resume-role">Graduate Student Assistant</span>
-            <span class="resume-place">Housing and Residence Life, University of North Texas | Nov 2023 - May 2025</span>
-            <ul>
-              <li>Maintained and updated housing data records, improving accuracy by 30%.</li>
-              <li>Built dashboards for housing data, reducing manual reporting workload by 40%.</li>
-              <li>Automated basic data workflows using Python and SQL.</li>
-            </ul>
-          </div>
-          <div class="resume-item">
-            <span class="resume-role">Systems Engineer</span>
-            <span class="resume-place">Infosys | Dec 2021 – Jun 2023</span>
-            <ul>
-              <li>Designed scalable web applications using Java, React.js, Postgres.</li>
-              <li>Built and deployed microservices on AWS with Docker & OpenShift.</li>
-              <li>Implemented event-driven solutions using Kafka and RabbitMQ.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="resume-block">
-          <h3>Academic Projects</h3>
-          <div class="resume-item">
-            <span class="resume-role">AI Agent Workflow</span>
-            <span class="resume-place">Apr 2025 - May 2025</span>
-            <ul>
-              <li>Developed an AI-driven automation workflow using AWS Lambda & Strands Agent.</li>
-              <li>Automated content storage, versioning, logging, and website publishing.</li>
-            </ul>
-          </div>
-          <div class="resume-item">
-            <span class="resume-role">Madrid Air Quality Analysis</span>
-            <span class="resume-place">Oct 2024 - Nov 2024</span>
-            <ul>
-              <li>Built Python-based data pipeline to analyze CO, NO2, O3, and traffic variables.</li>
-              <li>Delivered interactive dashboards and visual reports.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+/* Navigation */
+nav {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-list">
-        <div class="project-card">
-          <h4>Project 1</h4>
-          <p>Brief description of project 1.</p>
-          <div class="project-tags">
-            <span class="tag">Java</span>
-            <span class="tag">AWS</span>
-          </div>
-        </div>
-        <div class="project-card">
-          <h4>Project 2</h4>
-          <p>Brief description of project 2.</p>
-          <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Data Analysis</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact</h2>
-      <ul class="contact-list">
-        <li>Email: youremail@example.com</li>
-        <li>Phone: +1 234 567 890</li>
-        <li>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></li>
-      </ul>
-    </div>
-  </section>
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, var(--accent), var(--highlight));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: var(--transition);
+}
 
-</body>
-</html>
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  transition: var(--transition);
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, var(--accent), var(--highlight));
+  transition: var(--transition);
+  transform: translateX(-50%);
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  background: linear-gradient(135deg, var(--accent), var(--highlight));
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(83, 52, 131, 0.3);
+}
+
+/* Sections */
+.section {
+  padding: 4rem 0;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60%;
+  height: 4px;
+  background: linear-gradient(135deg, var(--accent), var(--highlight));
+  border-radius: 2px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--accent), var(--highlight));
+  border-radius: 2px;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--secondary);
+}
+
+/* Home Section */
+#home {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: var(--white);
+  min-height: 100vh;
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#home h1 {
+  color: var(--white);
+  font-size: 3.5rem;
+  animation: fadeInUp 0.8s ease;
+  margin-bottom: 1rem;
+}
+
+#home h1::after {
+  display: none;
+}
+
+.job-titles {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.home-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.home-btn {
+  padding: 0.9rem 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.home-btn:hover {
+  background: var(--white);
+  color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* About Section */
+#about {
+  background: var(--background);
+  color: var(--text-dark);
+  min-height: auto;
+  padding: 4rem 0;
+}
+
+#about h2 {
+  color: var(--primary);
+}
+
+#about h2::after {
+  background: linear-gradient(135deg, var(--accent), var(--highlight));
+}
+
+.about-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 2.5rem;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.value-section {
+  margin-top: 3rem;
+}
+
+.value-section h3 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.value-item {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--highlight);
+}
+
+.value-item strong {
+  color: var(--primary);
+  font-size: 1.05rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.skills-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.skill-category {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.skill-category strong {
+  color: var(--highlight);
+  font-size: 1.05rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.skill-category span {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* Resume Section */
+#resume {
+  background: white;
+  padding: 4rem 0;
+}
+
+.resume-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.resume-block {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  transition: var(--transition);
+  height: fit-content;
+}
+
+.resume-block:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.resume-block h3 {
+  color: var(--primary);
+  border-bottom: 3px solid var(--highlight);
+  padding-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.resume-item {
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent);
+  position: relative;
+}
+
+.resume-item::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 8px;
+  width: 11px;
+  height: 11px;
+  background: var(--highlight);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--white);
+}
+
+.resume-role {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.resume-place {
+  display: block;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+.resume-block ul {
+  list-style: none;
+  margin: 0.8rem 0 0 0.5rem;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.resume-block ul li {
+  margin-bottom: 0.6rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.resume-block ul li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--highlight);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Projects Section */
+#projects {
+  background: var(--background);
+  padding: 4rem 0;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(135deg, var(--accent), var(--highlight));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--highlight);
+}
+
+.project-card h4 {
+  margin: 0 0 1rem 0;
+  color: var(--primary);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.project-card p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  background: linear-gradient(135deg, var(--accent), var(--highlight));
+  color: var(--white);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Contact Section */
+#contact {
+  background: white;
+  padding: 4rem 0;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0 0;
+  display: grid;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-list li {
+  background: var(--white);
+  padding:
