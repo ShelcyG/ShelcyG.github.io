@@ -1,3 +1,4 @@
+/* Root variables for colors and styles */
 :root {
   --primary: #1a1a2e;
   --secondary: #16213e;
@@ -12,16 +13,211 @@
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
   --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
   --radius: 12px;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: all 0.3s ease;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Poppins', sans-serif; background: var(--background); color: var(--text-dark); line-height: 1.7; overflow-x: hidden; }
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--background);
+  color: var(--text-dark);
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
 
 /* Navigation */
-nav { background: var(--white); border-bottom: 1px solid var(--border); box-shadow: var(--shadow-sm); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); }
-.nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
-.nav-logo { font-size: 1.4rem; font-weight: 600; background: linear-gradient(135deg, var(--accent), var(--highlight)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.nav-links { list-style: none; display: flex; gap: 0.5rem; }
-.nav-links a { text
+nav {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--highlight));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: linear-gradient(135deg, var(--accent), var(--highlight));
+  color: var(--white);
+  box-shadow: 0 4px 12px rgba(83, 52, 131, 0.3);
+}
+
+/* Sections */
+.section {
+  padding: 4rem 0;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.3rem;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+/* Home Section */
+#home {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: var(--white);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.job-titles {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.home-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home-btn {
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  border: 2px solid rgba(255,255,255,0.5);
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.home-btn:hover {
+  background: var(--white);
+  color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Resume / Experience / Education / Skills */
+.job, .education, .skill-category {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+}
+
+.job:hover, .education:hover, .skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.job-date, .edu-date {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+ul li::before {
+  content: '▹';
+  color: var(--highlight);
+  margin-right: 0.5rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+/* Contact Section */
+#contact {
+  text-align: center;
+}
+
+.contact-info p {
+  margin-bottom: 0.8rem;
+}
+
+.contact-info a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .home-links {
+    flex-direction: column;
+  }
+}
