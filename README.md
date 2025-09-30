@@ -1,4 +1,3 @@
-# ShelcyG.github.io
 # Shelcy Govada – Portfolio
 
 This is my personal portfolio showcasing my **work experience, education, technical skills, and projects**.
