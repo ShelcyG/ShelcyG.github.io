@@ -1,12 +1,12 @@
 # ShelcyG.github.io
-# My Personal Resume Website
+# Shelcy Govada – Portfolio
 
-This repository contains my personal resume website built with HTML and CSS.
+This is my personal portfolio showcasing my **work experience, education, technical skills, and projects**.
 
-## Project Goals
-- Learn Git and GitHub fundamentals
-- Create a professional online presence
-- Practice web development skills
+## 🌐 Live Portfolio
+[https://shelcyg.github.io/](https://shelcyg.github.io/)
 
-## Live Website
-View my resume at: https://ShelcyG.github.io
+## 📧 Contact
+- Email: shelcygovada44@gmail.com  
+- LinkedIn: [linkedin.com/in/shelcyg1704](https://www.linkedin.com/in/shelcyg1704)  
+- GitHub: [github.com/ShelcyG](https://github.com/ShelcyG)
