@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Shelcy Govada | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Navigation -->
   <nav>
     <div class="nav-container">
-      <div class="nav-logo">Shelcy Govada</div>
+      <div class="nav-logo">MyPortfolio</div>
       <ul class="nav-links">
-        <li><a href="#about" class="active">About</a></li>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#resume">Resume</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -20,104 +23,113 @@
     </div>
   </nav>
 
-  <main>
-    <section id="about" class="section">
-      <div class="container">
-        <h1>About Me</h1>
-        <p>
-          I am a Full Stack Developer passionate about crafting robust web applications from concept to deployment. My expertise covers both frontend and backend technologies including React, Node.js, Express, and MongoDB. I thrive in fast-paced environments, translating business requirements into practical solutions and delivering seamless user experiences. My professional journey has equipped me with hands-on experience in cloud platforms like AWS, Vercel, and Netlify, as well as DevOps practices such as Docker, CI/CD, and collaborative teamwork. I am committed to continuous learning and leveraging technology to solve real-world problems.
-        </p>
-      </div>
-    </section>
-
-    <section id="resume" class="section">
-      <div class="container">
-        <h2>Resume</h2>
-        <div class="resume-columns">
-          <div class="resume-block">
-            <h3>Experience</h3>
-            <div class="resume-item">
-              <span class="resume-role">Full Stack Developer</span>
-              <span class="resume-place">Tech Startup (2023–Present)</span>
-              <ul>
-                <li>Developed and deployed scalable SaaS platforms and optimized APIs for performance and reliability.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <span class="resume-role">Frontend Engineer</span>
-              <span class="resume-place">Web Agency (2021–2023)</span>
-              <ul>
-                <li>Developed responsive interfaces and improved performance for client web projects.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="resume-block">
-            <h3>Education</h3>
-            <div class="resume-item">
-              <span class="resume-role">MSc Information Technology</span>
-              <span class="resume-place">University of North Texas (2023–2025)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="container">
-        <h2>Projects</h2>
-        <div class="projects-list">
-          <div class="project-card">
-            <h4>E-Commerce Platform</h4>
-            <p>Developed a full-featured MERN stack e-commerce site with authentication, order management, and payment integration.</p>
-          </div>
-          <div class="project-card">
-            <h4>Analytics Dashboard</h4>
-            <p>Created a real-time dashboard using React, Node.js, and Chart.js to visualize data from multiple APIs.</p>
-          </div>
-          <div class="project-card">
-            <h4>REST API for Task Management</h4>
-            <p>Designed a RESTful API with Express and MongoDB, supporting JWT authentication and role-based access.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Contact</h2>
-        <ul class="contact-list">
-          <li>Email: <a href="mailto:shelcygovada44@gmail.com">shelcygovada44@gmail.com</a></li>
-          <li>LinkedIn: <a href="https://www.linkedin.com/in/shelcyg1704" target="_blank">linkedin.com/in/shelcyg1704</a></li>
-          <li>GitHub: <a href="https://github.com/ShelcyG" target="_blank">github.com/ShelcyG</a></li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+  <!-- Home Section -->
+  <section id="home" class="section">
     <div class="container">
-      &copy; <span id="year"></span> Shelcy Govada
+      <h1>Hello, I'm [Your Name]</h1>
+      <div class="job-titles">Software Engineer & Graduate Student</div>
+      <div class="home-links">
+        <a href="#projects" class="home-btn">View Projects</a>
+        <a href="#contact" class="home-btn">Contact Me</a>
+      </div>
     </div>
-  </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // Active nav highlight on scroll
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-links a');
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        if (pageYOffset >= section.offsetTop - 80) {
-          current = section.getAttribute('id');
-        }
-      });
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p class="about-intro">
+        I’m a software engineer and graduate student with experience in full-stack development, cloud computing, and data analytics. I build scalable web applications, automate workflows, and create data-driven solutions using Java, React, Python, AWS, and SQL.
+      </p>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="section">
+    <div class="container">
+      <h2>Resume</h2>
+      <div class="resume-columns">
+        <div class="resume-block">
+          <h3>Experience</h3>
+          <div class="resume-item">
+            <span class="resume-role">Graduate Student Assistant</span>
+            <span class="resume-place">Housing and Residence Life, University of North Texas | Nov 2023 - May 2025</span>
+            <ul>
+              <li>Maintained and updated housing data records, improving accuracy by 30%.</li>
+              <li>Built dashboards for housing data, reducing manual reporting workload by 40%.</li>
+              <li>Automated basic data workflows using Python and SQL.</li>
+            </ul>
+          </div>
+          <div class="resume-item">
+            <span class="resume-role">Systems Engineer</span>
+            <span class="resume-place">Infosys | Dec 2021 – Jun 2023</span>
+            <ul>
+              <li>Designed scalable web applications using Java, React.js, Postgres.</li>
+              <li>Built and deployed microservices on AWS with Docker & OpenShift.</li>
+              <li>Implemented event-driven solutions using Kafka and RabbitMQ.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="resume-block">
+          <h3>Academic Projects</h3>
+          <div class="resume-item">
+            <span class="resume-role">AI Agent Workflow</span>
+            <span class="resume-place">Apr 2025 - May 2025</span>
+            <ul>
+              <li>Developed an AI-driven automation workflow using AWS Lambda & Strands Agent.</li>
+              <li>Automated content storage, versioning, logging, and website publishing.</li>
+            </ul>
+          </div>
+          <div class="resume-item">
+            <span class="resume-role">Madrid Air Quality Analysis</span>
+            <span class="resume-place">Oct 2024 - Nov 2024</span>
+            <ul>
+              <li>Built Python-based data pipeline to analyze CO, NO2, O3, and traffic variables.</li>
+              <li>Delivered interactive dashboards and visual reports.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-list">
+        <div class="project-card">
+          <h4>Project 1</h4>
+          <p>Brief description of project 1.</p>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">AWS</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h4>Project 2</h4>
+          <p>Brief description of project 2.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Data Analysis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li>Email: youremail@example.com</li>
+        <li>Phone: +1 234 567 890</li>
+        <li>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></li>
+      </ul>
+    </div>
+  </section>
+
 </body>
 </html>
